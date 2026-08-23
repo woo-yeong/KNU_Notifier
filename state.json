@@ -1,5 +1,507 @@
 {
-  "initialized": false,
-  "initialized_sources": [],
-  "posts": {}
+  "initialized": true,
+  "initialized_sources": [
+    "career_notice",
+    "employment",
+    "field_training",
+    "notice"
+  ],
+  "posts": {
+    "notice:105493": {
+      "source": "notice",
+      "post_id": "105493",
+      "title": "수업 2026.2학기 수강변경 안내",
+      "author": "손경림",
+      "date": "2026-08-20",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105493"
+    },
+    "notice:105464": {
+      "source": "notice",
+      "post_id": "105464",
+      "title": "학적 2026. 08. 21.(금) 졸업장 배부 및 학위복 대여 안내",
+      "author": "박현미",
+      "date": "2026-08-05",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105464"
+    },
+    "notice:105426": {
+      "source": "notice",
+      "post_id": "105426",
+      "title": "학적 2026학년도 2학기 재학생 등록금 수납 계획 안내",
+      "author": "박현미",
+      "date": "2026-07-21",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105426"
+    },
+    "notice:105500": {
+      "source": "notice",
+      "post_id": "105500",
+      "title": "장학 2026년도 장학금 부정수급 자진신고 안내(∼10.9)",
+      "author": "정수연",
+      "date": "2026-08-21",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105500"
+    },
+    "notice:105499": {
+      "source": "notice",
+      "post_id": "105499",
+      "title": "기타 2026학년도 2학기 첨성인 학습PT 모집 안내",
+      "author": "박현미",
+      "date": "2026-08-20",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105499"
+    },
+    "notice:105498": {
+      "source": "notice",
+      "post_id": "105498",
+      "title": "기타 [인공지능혁신융합대학사업단] 2026 2학기 캡스톤디자인 교과목 지원 안내",
+      "author": "AICOSS",
+      "date": "2026-08-20",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105498"
+    },
+    "notice:105496": {
+      "source": "notice",
+      "post_id": "105496",
+      "title": "기타 [도윤선 교수] 학부 연수생 모집 (~9/2)",
+      "author": "도윤선",
+      "date": "2026-08-20",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105496"
+    },
+    "notice:105495": {
+      "source": "notice",
+      "post_id": "105495",
+      "title": "행사 제6회 반도체특성화 비교과 단기강좌 신청 결과 안내(선착순70명）",
+      "author": "이윤서",
+      "date": "2026-08-20",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105495"
+    },
+    "notice:105494": {
+      "source": "notice",
+      "post_id": "105494",
+      "title": "기타 2026년 9월~11월 국립대학육성사업 지역 AI·SW 혁신 인재 양성 프로그램 안내",
+      "author": "권혁주",
+      "date": "2026-08-20",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105494"
+    },
+    "notice:105492": {
+      "source": "notice",
+      "post_id": "105492",
+      "title": "행사 [반도체특성화대학사업단]에뮬레이터(Palladium Z3SS) 기반 V&V 실습 교육 참여학생 모집",
+      "author": "이윤서",
+      "date": "2026-08-19",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105492"
+    },
+    "notice:105491": {
+      "source": "notice",
+      "post_id": "105491",
+      "title": "장학 2026. 2학기 보훈(가족)장학 안내",
+      "author": "정수연",
+      "date": "2026-08-19",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105491"
+    },
+    "notice:105485": {
+      "source": "notice",
+      "post_id": "105485",
+      "title": "수업 학칙 개정에 따른 수강신청 제도 일부 변경사항 사전 안내",
+      "author": "손경림",
+      "date": "2026-08-18",
+      "url": "https://see.knu.ac.kr/mobile/content/notice.html?gtid=notice&pg=vv&fidx=105485"
+    },
+    "employment:105490": {
+      "source": "employment",
+      "post_id": "105490",
+      "title": "[KT&G] 2026년 하반기 KT&G 신입,경력사원 채용(~8/26(수) 15시까지)",
+      "author": "정수연",
+      "date": "2026-08-19",
+      "url": "https://see.knu.ac.kr/mobile/content/employment.html?gtid=job&pg=vv&fidx=105490"
+    },
+    "employment:105489": {
+      "source": "employment",
+      "post_id": "105489",
+      "title": "[삼성디스플레이] 2026년 하반기 박사채용/박사장학생 선발",
+      "author": "정수연",
+      "date": "2026-08-19",
+      "url": "https://see.knu.ac.kr/mobile/content/employment.html?gtid=job&pg=vv&fidx=105489"
+    },
+    "employment:105442": {
+      "source": "employment",
+      "post_id": "105442",
+      "title": "[과기부•NIA] 2026 KQIC 양자 인턴십 5기 인턴사원 모집(~8/14)",
+      "author": "정수연",
+      "date": "2026-07-28",
+      "url": "https://see.knu.ac.kr/mobile/content/employment.html?gtid=job&pg=vv&fidx=105442"
+    },
+    "employment:105440": {
+      "source": "employment",
+      "post_id": "105440",
+      "title": "2026년 대구북구 글로벌 · 대기업 청년 취업 멘토링",
+      "author": "정수연",
+      "date": "2026-07-28",
+      "url": "https://see.knu.ac.kr/mobile/content/employment.html?gtid=job&pg=vv&fidx=105440"
+    },
+    "employment:105437": {
+      "source": "employment",
+      "post_id": "105437",
+      "title": "2026년 하반기 경기도 공공기관 통합채용(~8/14)",
+      "author": "정수연",
+      "date": "2026-07-28",
+      "url": "https://see.knu.ac.kr/mobile/content/employment.html?gtid=job&pg=vv&fidx=105437"
+    },
+    "employment:105433": {
+      "source": "employment",
+      "post_id": "105433",
+      "title": "[테크윙(반도체 시험 및 검사 장비 기업)] 2026년 7월 테크윙 각 부문 채용",
+      "author": "정수연",
+      "date": "2026-07-24",
+      "url": "https://see.knu.ac.kr/mobile/content/employment.html?gtid=job&pg=vv&fidx=105433"
+    },
+    "employment:105432": {
+      "source": "employment",
+      "post_id": "105432",
+      "title": "[DN솔루션즈] `26년 사무직 신입사원 채용(∼8.3/월 14:00)",
+      "author": "정수연",
+      "date": "2026-07-24",
+      "url": "https://see.knu.ac.kr/mobile/content/employment.html?gtid=job&pg=vv&fidx=105432"
+    },
+    "employment:105431": {
+      "source": "employment",
+      "post_id": "105431",
+      "title": "[HD현대로보틱스]채용연계형 인턴전형 지원(∼7.29/수)",
+      "author": "정수연",
+      "date": "2026-07-24",
+      "url": "https://see.knu.ac.kr/mobile/content/employment.html?gtid=job&pg=vv&fidx=105431"
+    },
+    "employment:105424": {
+      "source": "employment",
+      "post_id": "105424",
+      "title": "[HD현대로보틱스]채용연계형 인턴전형 추천 지원(∼7.22/수 16:00)",
+      "author": "정수연",
+      "date": "2026-07-20",
+      "url": "https://see.knu.ac.kr/mobile/content/employment.html?gtid=job&pg=vv&fidx=105424"
+    },
+    "employment:105423": {
+      "source": "employment",
+      "post_id": "105423",
+      "title": "[상시채용] 대구 경북 지역 모빌리티 SW 기업 상시 채용 안내",
+      "author": "박순용",
+      "date": "2026-07-20",
+      "url": "https://see.knu.ac.kr/mobile/content/employment.html?gtid=job&pg=vv&fidx=105423"
+    },
+    "career_notice:6133": {
+      "source": "career_notice",
+      "post_id": "6133",
+      "title": "행사(채용설명회/특강) [경북대 공과대학] 2026 공과대학 산학연 네트워킹데이(16개사 참여)",
+      "author": "진로취업과",
+      "date": "2026-08-21",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYxMzMmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6123": {
+      "source": "career_notice",
+      "post_id": "6123",
+      "title": "비교과(교육프로그램) [직무역량개발] 2026학년도 하반기「국민연금공단 취업·미래설계 아카데미」",
+      "author": "진로취업과",
+      "date": "2026-08-20",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYxMjMmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6122": {
+      "source": "career_notice",
+      "post_id": "6122",
+      "title": "비교과(교육프로그램) [직무역량개발] 2026학년도「생성형 AI활용 취업준비 교육」",
+      "author": "진로취업과",
+      "date": "2026-08-20",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYxMjImc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6121": {
+      "source": "career_notice",
+      "post_id": "6121",
+      "title": "비교과(교육프로그램) [직무 프로젝트] KNU 직무 마스터 프로젝트",
+      "author": "진로취업과",
+      "date": "2026-08-18",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYxMjEmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6118": {
+      "source": "career_notice",
+      "post_id": "6118",
+      "title": "비교과(교육프로그램) [취업전략•서류특강] 하반기「하이패스 대기업 Part2.」",
+      "author": "진로취업과",
+      "date": "2026-08-13",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYxMTgmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6111": {
+      "source": "career_notice",
+      "post_id": "6111",
+      "title": "비교과(교육프로그램) [멘토링] 하반기 동문선배 멘토링 '커넥트' (Part1. 대기업)",
+      "author": "진로취업과",
+      "date": "2026-08-11",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYxMTEmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6110": {
+      "source": "career_notice",
+      "post_id": "6110",
+      "title": "공지 [대학원혁신] 대학원생 직무교육(반도체 분야)",
+      "author": "진로취업과",
+      "date": "2026-08-11",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYxMTAmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6104": {
+      "source": "career_notice",
+      "post_id": "6104",
+      "title": "비교과(교육프로그램) [서류합격전략] 하반기 자소서 인사이트",
+      "author": "진로취업과",
+      "date": "2026-08-11",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYxMDQmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6103": {
+      "source": "career_notice",
+      "post_id": "6103",
+      "title": "교과목 [진로탐색수업] 2026학년도 2학기 수강 대상자 선발 결과 및 오리엔테이션 개최 안내",
+      "author": "진로취업과",
+      "date": "2026-08-10",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYxMDMmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6097": {
+      "source": "career_notice",
+      "post_id": "6097",
+      "title": "교과목 [진로탐색수업] 2026학년도 1학기 우수과제 선정 결과 및 상장 수령 안내",
+      "author": "진로취업과",
+      "date": "2026-08-07",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwOTcmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6087": {
+      "source": "career_notice",
+      "post_id": "6087",
+      "title": "비교과(교육프로그램) [진로취업과] 'KNU-대구앵커' 청년 연구자를 위한 ABB 역량 강화 프로그램(2차) 신청 안내 - 생성형 AI로 완성하는 ..",
+      "author": "진로취업과",
+      "date": "2026-08-06",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwODcmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6084": {
+      "source": "career_notice",
+      "post_id": "6084",
+      "title": "공지 [진로취업과] KNU 진로취업 학생 서포터즈 제1기 모집",
+      "author": "진로취업과",
+      "date": "2026-08-03",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwODQmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6066": {
+      "source": "career_notice",
+      "post_id": "6066",
+      "title": "기타 [2026 K-뉴딜 아카데미] 교육과정 및 신청 안내",
+      "author": "진로취업과",
+      "date": "2026-07-07",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwNjYmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6065": {
+      "source": "career_notice",
+      "post_id": "6065",
+      "title": "비교과(교육프로그램) [진로취업과] 2026학년도 직무기반 포트폴리오 완성 「포폴力(력)」 (1~2회차)",
+      "author": "진로취업과",
+      "date": "2026-07-07",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwNjUmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6018": {
+      "source": "career_notice",
+      "post_id": "6018",
+      "title": "공지 [진로취업과] 2026학년도 진로취업 경력개발장학금제 운영 안내",
+      "author": "진로취업과",
+      "date": "2026-06-23",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwMTgmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6017": {
+      "source": "career_notice",
+      "post_id": "6017",
+      "title": "공지 [경상북도경제진흥원] 2026 경북 청년애꿈수당 사업 안내",
+      "author": "진로취업과",
+      "date": "2026-06-17",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwMTcmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:5992": {
+      "source": "career_notice",
+      "post_id": "5992",
+      "title": "비교과(교육프로그램) [진로취업과] 2026학년도 「필기전형 온라인 학습 사이트」운영 안내",
+      "author": "진로취업과",
+      "date": "2026-06-11",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTU5OTImc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:5928": {
+      "source": "career_notice",
+      "post_id": "5928",
+      "title": "기타 [고용노동부] 국민취업지원제도 안내",
+      "author": "진로취업과",
+      "date": "2026-04-29",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTU5Mjgmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:5896": {
+      "source": "career_notice",
+      "post_id": "5896",
+      "title": "비교과(교육프로그램) [진로취업과] 경북대학교 진로취업과 2026학년도 비교과 프로그램 로드맵",
+      "author": "진로취업과",
+      "date": "2026-03-25",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTU4OTYmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:5166": {
+      "source": "career_notice",
+      "post_id": "5166",
+      "title": "공지 [동문선배 e-멘토링] 현직자(졸업전 취업자 가능) 온라인 멘토 가입 안내(연중 상시)",
+      "author": "진로취업과",
+      "date": "2024-12-13",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTUxNjYmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:4624": {
+      "source": "career_notice",
+      "post_id": "4624",
+      "title": "공지 [진로취업지원을 위한 상시 제휴서비스] 26학년도 이용 안내",
+      "author": "진로취업과",
+      "date": "2024-03-12",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTQ2MjQmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:4410": {
+      "source": "career_notice",
+      "post_id": "4410",
+      "title": "공지 [진로취업과] JOB PLAZA 스터디룸 이용 관련 공지사항 ('23. 12. 4.적용)",
+      "author": "진로취업과",
+      "date": "2023-11-28",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTQ0MTAmc3RhcnRQYWdlPTAmbGlzdE5vPTY5NyZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "career_notice:6098": {
+      "source": "career_notice",
+      "post_id": "6098",
+      "title": "비교과(교육프로그램) [진로취업과] 2026학년도 「면접 이미지메이킹」",
+      "author": "진로취업과",
+      "date": "2026-08-07",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwOTgmc3RhcnRQYWdlPTAmbGlzdE5vPTY4OCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgxNzE1OSZjb2RlPVZzRFgyN2RtdUtuVyZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:6076": {
+      "source": "field_training",
+      "post_id": "6076",
+      "title": "2026-2학기 현장실습 지원가능 실습기관 목록(8.21.기준)",
+      "author": "진로취업과",
+      "date": "2026-07-20",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwNzYmc3RhcnRQYWdlPTAmbGlzdE5vPTEzNCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:6011": {
+      "source": "field_training",
+      "post_id": "6011",
+      "title": "[안내] 현장실습 실습확정자 오리엔테이션 안내",
+      "author": "진로취업과",
+      "date": "2026-06-12",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwMTEmc3RhcnRQYWdlPTAmbGlzdE5vPTEzNCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:5919": {
+      "source": "field_training",
+      "post_id": "5919",
+      "title": "[공고] '26하계 및 2학기 현장실습 참여 학생 모집",
+      "author": "진로취업과",
+      "date": "2026-04-27",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTU5MTkmc3RhcnRQYWdlPTAmbGlzdE5vPTEzNCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:5918": {
+      "source": "field_training",
+      "post_id": "5918",
+      "title": "[공고] '26하계 및 2학기 현장실습 참여 실습기관 모집",
+      "author": "진로취업과",
+      "date": "2026-04-27",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTU5MTgmc3RhcnRQYWdlPTAmbGlzdE5vPTEzNCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:4025": {
+      "source": "field_training",
+      "post_id": "4025",
+      "title": "[공지] 현장실습 지도교수 승인 방법",
+      "author": "진로취업과",
+      "date": "2023-05-08",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTQwMjUmc3RhcnRQYWdlPTAmbGlzdE5vPTEzNCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:3838": {
+      "source": "field_training",
+      "post_id": "3838",
+      "title": "[공지] 대학원 현장실습 운영",
+      "author": "진로취업과",
+      "date": "2022-12-21",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTM4Mzgmc3RhcnRQYWdlPTAmbGlzdE5vPTEzNCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:3352": {
+      "source": "field_training",
+      "post_id": "3352",
+      "title": "[공지] 실습기관인정동의서 제출 안내",
+      "author": "진로취업과",
+      "date": "2022-06-21",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTMzNTImc3RhcnRQYWdlPTAmbGlzdE5vPTEzNCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:2798": {
+      "source": "field_training",
+      "post_id": "2798",
+      "title": "[공지] 현장실습 불인정 기준 안내",
+      "author": "진로취업과",
+      "date": "2021-12-01",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTI3OTgmc3RhcnRQYWdlPTAmbGlzdE5vPTEzNCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:2429": {
+      "source": "field_training",
+      "post_id": "2429",
+      "title": "[공지] 이수실적증명서 발급 안내",
+      "author": "진로취업과",
+      "date": "2021-09-17",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTI0Mjkmc3RhcnRQYWdlPTAmbGlzdE5vPTEzNCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:6083": {
+      "source": "field_training",
+      "post_id": "6083",
+      "title": "[모집] 노보텔 앰배서더 서울 동대문 '26년 2학기 학기제 현장실습 모집",
+      "author": "진로취업과",
+      "date": "2026-07-30",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwODMmc3RhcnRQYWdlPTAmbGlzdE5vPTEzNCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:6069": {
+      "source": "field_training",
+      "post_id": "6069",
+      "title": "[모집] 한국건설기술연구원 '26-2학기 현장실습생 모집",
+      "author": "진로취업과",
+      "date": "2026-07-08",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwNjkmc3RhcnRQYWdlPTAmbGlzdE5vPTEzMiZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:6067": {
+      "source": "field_training",
+      "post_id": "6067",
+      "title": "[공지] 현장실습 성적처리 안내('26년 1학기 및 하계)",
+      "author": "진로취업과",
+      "date": "2026-07-07",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwNjcmc3RhcnRQYWdlPTAmbGlzdE5vPTEzMSZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:6047": {
+      "source": "field_training",
+      "post_id": "6047",
+      "title": "[HD현대삼호] '26년 2학기 채용연계형 현장실습학기제 모집 및 온라인 설명회 안내",
+      "author": "진로취업과",
+      "date": "2026-07-03",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwNDcmc3RhcnRQYWdlPTAmbGlzdE5vPTEzMCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:6045": {
+      "source": "field_training",
+      "post_id": "6045",
+      "title": "[HD현대] '26년 2학기 채용연계형 현장실습학기제 모집",
+      "author": "진로취업과",
+      "date": "2026-07-03",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwNDUmc3RhcnRQYWdlPTAmbGlzdE5vPTEyOSZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:6013": {
+      "source": "field_training",
+      "post_id": "6013",
+      "title": "[모집] 헨켈코리아 인턴십프로그램 운영 안내",
+      "author": "진로취업과",
+      "date": "2026-06-15",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTYwMTMmc3RhcnRQYWdlPTAmbGlzdE5vPTEyOCZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:5952": {
+      "source": "field_training",
+      "post_id": "5952",
+      "title": "[안내] 주식회사 화신 현장실습생 모집 설명회 안내",
+      "author": "진로취업과",
+      "date": "2026-05-29",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTU5NTImc3RhcnRQYWdlPTAmbGlzdE5vPTEyNiZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    },
+    "field_training:5949": {
+      "source": "field_training",
+      "post_id": "5949",
+      "title": "[공지] 2026년 2학기 연구학기제 현장실습 실습기관 목록",
+      "author": "진로취업과",
+      "date": "2026-05-21",
+      "url": "https://home.knu.ac.kr/HOME/knujob/sub.htm?mode=view&mv_data=aWR4PTU5NDkmc3RhcnRQYWdlPTAmbGlzdE5vPTEyNSZ0YWJsZT1leF9iYnNfZGF0YV9rbnVqb2ImbmF2X2NvZGU9a251MTYyMzgyNjE3OSZjb2RlPTQwN0tGOUVET1U4dSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPSZvcmRlcl9saXN0PSZsaXN0X3NjYWxlPSZ2aWV3X2xldmVsPSZ2aWV3X2NhdGU9JnZpZXdfY2F0ZTI9"
+    }
+  }
 }
