@@ -1,0 +1,53 @@
+name: Check KNU SEE notices
+
+on:
+  schedule:
+    # GitHub cron uses UTC. Every 10 minutes.
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      test_discord:
+        description: "Send a Discord connection test only"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: knu-see-notice-watcher
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check notices
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TEST_DISCORD: ${{ inputs.test_discord }}
+        run: |
+          if [ "$TEST_DISCORD" = "true" ]; then
+            python3 notifier.py --test
+          else
+            python3 notifier.py
+          fi
+
+      - name: Save notification state
+        if: ${{ inputs.test_discord != true }}
+        run: |
+          if git diff --quiet -- state.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state.json
+          git commit -m "chore: update notice state"
+          git push
