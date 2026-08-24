@@ -261,26 +261,23 @@ async function recordSuccess(db, source, newCount, modifiedCount, now) {
 
 export default {
   async scheduled(_controller, env, _ctx) {
-    const results = [];
-    let currentSource = null;
+    const source = SOURCES.find((item) => item.key === env.SOURCE_KEY);
+    if (!source) {
+      throw new Error(`지원하지 않는 SOURCE_KEY: ${env.SOURCE_KEY || "(없음)"}`);
+    }
+
     try {
-      for (const source of SOURCES) {
-        currentSource = source;
-        results.push(await checkSource(env, source));
-      }
+      const result = await checkSource(env, source);
       console.log(JSON.stringify({
         level: "info",
         event: "check_complete",
-        sources: results.map((result) => result.source),
-        newCount: results.reduce((sum, result) => sum + result.newCount, 0),
-        modifiedCount: results.reduce((sum, result) => sum + result.modifiedCount, 0),
-        at: new Date().toISOString(),
+        ...result,
       }));
     } catch (error) {
       console.error(JSON.stringify({
         level: "error",
         event: "check_failed",
-        source: currentSource?.key || "unknown",
+        source: source.key,
         message: error.message,
         at: new Date().toISOString(),
       }));
