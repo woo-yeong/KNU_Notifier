@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "check": "wrangler deploy --dry-run",
+    "check:all": "wrangler deploy --dry-run && wrangler deploy --dry-run -c wrangler.employment.jsonc && wrangler deploy --dry-run -c wrangler.career.jsonc",
     "deploy": "wrangler deploy",
+    "deploy:all": "wrangler deploy && wrangler deploy -c wrangler.employment.jsonc && wrangler deploy -c wrangler.career.jsonc",
     "dev": "wrangler dev --test-scheduled"
   },
   "devDependencies": {
