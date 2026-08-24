@@ -16,8 +16,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "knu-notice-state",
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+      "database_name": "KNU-Notifier",
+      "database_id": "1bf4c53c-22b1-4395-b87d-f01282280f50"
     }
   ]
 }
