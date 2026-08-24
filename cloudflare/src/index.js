@@ -288,8 +288,25 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname !== "/health") return new Response("Not Found", { status: 404 });
-    const lastSuccess = await env.DB.prepare("SELECT value, updated_at FROM monitor_state WHERE key = 'last_success'").first();
-    return Response.json({ ok: Boolean(lastSuccess), lastSuccess: lastSuccess || null });
+    const [lastSuccess, sourceStates] = await Promise.all([
+      env.DB.prepare(
+        "SELECT value, updated_at FROM monitor_state WHERE key = 'last_success'",
+      ).first(),
+      env.DB.prepare(
+        "SELECT source, updated_at FROM source_state WHERE initialized = 1",
+      ).all(),
+    ]);
+    const expectedSources = new Set(SOURCES.map((source) => source.key));
+    const sources = Object.fromEntries(
+      (sourceStates.results || [])
+        .filter((row) => expectedSources.has(row.source))
+        .map((row) => [row.source, row.updated_at]),
+    );
+    return Response.json({
+      ok: Boolean(lastSuccess) && Object.keys(sources).length === SOURCES.length,
+      lastSuccess: lastSuccess || null,
+      sources,
+    });
   },
 };
 
