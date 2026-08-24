@@ -259,25 +259,28 @@ async function recordSuccess(db, source, newCount, modifiedCount, now) {
     .bind(JSON.stringify({ source: source.key, newCount, modifiedCount }), now).run();
 }
 
-function sourceForScheduledTime(scheduledTime) {
-  const raw = Number(scheduledTime) || Date.now();
-  const epochMinute = raw > 1_000_000_000_000
-    ? Math.floor(raw / 60_000)
-    : Math.floor(raw / 60);
-  return SOURCES[epochMinute % SOURCES.length];
-}
-
 export default {
-  async scheduled(controller, env, _ctx) {
-    const source = sourceForScheduledTime(controller.scheduledTime);
+  async scheduled(_controller, env, _ctx) {
+    const results = [];
+    let currentSource = null;
     try {
-      const result = await checkSource(env, source);
-      console.log(JSON.stringify({ level: "info", event: "check_complete", ...result }));
+      for (const source of SOURCES) {
+        currentSource = source;
+        results.push(await checkSource(env, source));
+      }
+      console.log(JSON.stringify({
+        level: "info",
+        event: "check_complete",
+        sources: results.map((result) => result.source),
+        newCount: results.reduce((sum, result) => sum + result.newCount, 0),
+        modifiedCount: results.reduce((sum, result) => sum + result.modifiedCount, 0),
+        at: new Date().toISOString(),
+      }));
     } catch (error) {
       console.error(JSON.stringify({
         level: "error",
         event: "check_failed",
-        source: source.key,
+        source: currentSource?.key || "unknown",
         message: error.message,
         at: new Date().toISOString(),
       }));
