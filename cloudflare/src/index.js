@@ -188,7 +188,6 @@ async function sendDiscord(webhookUrl, source, post, eventType) {
             { name: "작성자", value: post.author || "-", inline: true },
             { name: "작성일", value: post.date || "-", inline: true },
           ],
-          footer: { text: `게시글 ID ${post.postId}` },
         },
       ],
     }),
