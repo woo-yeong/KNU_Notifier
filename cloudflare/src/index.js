@@ -25,14 +25,6 @@ const SOURCES = [
     color: 0xe67e22,
     kind: "knujob",
   },
-  {
-    key: "field_training",
-    name: "현장실습 공지사항",
-    url: "https://home.knu.ac.kr/HOME/knujob/sub.htm?nav_code=knu1623826179",
-    emoji: "🟣",
-    color: 0x8e44ad,
-    kind: "knujob",
-  },
 ];
 
 const USER_AGENT = "KNU-Notice-Discord-Notifier/2.0";
