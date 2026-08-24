@@ -63,4 +63,28 @@ jobs:
                   f"Worker has not completed successfully for "
                   f"{age_minutes:.1f} minutes"
               )
+
+          expected_sources = {
+              "notice",
+              "employment",
+              "career_notice",
+          }
+          sources = data.get("sources") or {}
+          missing_sources = expected_sources - set(sources)
+          if missing_sources:
+              raise SystemExit(
+                  f"Missing board health records: {sorted(missing_sources)}"
+              )
+
+          for source in sorted(expected_sources):
+              source_time = datetime.fromisoformat(
+                  sources[source].replace("Z", "+00:00")
+              )
+              source_age = (now - source_time).total_seconds() / 60
+              print(f"{source}: last success {source_age:.1f} minutes ago")
+              if source_age > 20:
+                  raise SystemExit(
+                      f"{source} has not completed successfully for "
+                      f"{source_age:.1f} minutes"
+                  )
           PY
