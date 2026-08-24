@@ -2,7 +2,7 @@ name: Monitor Cloudflare Worker
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -58,7 +58,7 @@ jobs:
 
           print(f"Last successful collection: {age_minutes:.1f} minutes ago")
 
-          if age_minutes > 45:
+          if age_minutes > 15:
               raise SystemExit(
                   f"Worker has not completed successfully for "
                   f"{age_minutes:.1f} minutes"
@@ -82,7 +82,7 @@ jobs:
               )
               source_age = (now - source_time).total_seconds() / 60
               print(f"{source}: last success {source_age:.1f} minutes ago")
-              if source_age > 20:
+              if source_age > 10:
                   raise SystemExit(
                       f"{source} has not completed successfully for "
                       f"{source_age:.1f} minutes"
