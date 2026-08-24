@@ -197,60 +197,90 @@ async function savePost(db, post, now) {
     .run();
 }
 
-async function checkNotices(env) {
+async function checkSource(env, source) {
   if (!env.DISCORD_WEBHOOK_URL) throw new Error("DISCORD_WEBHOOK_URL secret이 없습니다");
-  await ensureSchema(env.DB);
+
   const now = new Date().toISOString();
-  const collected = await Promise.all(SOURCES.map(async (source) => ({ source, posts: await fetchPosts(source) })));
-  let newCount = 0;
-  let modifiedCount = 0;
+  const posts = await fetchPosts(source);
+  const initialized = await env.DB.prepare(
+    "SELECT initialized FROM source_state WHERE source = ?",
+  ).bind(source.key).first();
 
-  for (const { source, posts } of collected) {
-    const initialized = await env.DB.prepare("SELECT initialized FROM source_state WHERE source = ?")
-      .bind(source.key).first();
-
-    if (!initialized?.initialized) {
-      await env.DB.batch(posts.map((post) => env.DB.prepare(`INSERT OR REPLACE INTO posts
-        (source, post_id, title, author, post_date, url, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)`)
-        .bind(post.source, post.postId, post.title, post.author, post.date, post.url, now)));
-      await env.DB.prepare(`INSERT INTO source_state (source, initialized, updated_at) VALUES (?, 1, ?)
-        ON CONFLICT(source) DO UPDATE SET initialized=1, updated_at=excluded.updated_at`)
-        .bind(source.key, now).run();
-      continue;
-    }
-
-    const ordered = [...posts].reverse();
-    for (const post of ordered) {
-      const previous = await env.DB.prepare(
-        "SELECT title, author, post_date FROM posts WHERE source = ? AND post_id = ?",
-      ).bind(source.key, post.postId).first();
-      let eventType = null;
-      if (!previous) eventType = "new";
-      else if (previous.title !== post.title || previous.author !== post.author || previous.post_date !== post.date) {
-        eventType = "modified";
-      }
-      if (eventType) {
-        await sendDiscord(env.DISCORD_WEBHOOK_URL, source, post, eventType);
-        if (eventType === "new") newCount += 1;
-        else modifiedCount += 1;
-      }
-      await savePost(env.DB, post, now);
-    }
+  if (!initialized?.initialized) {
+    await env.DB.batch(posts.map((post) => env.DB.prepare(`INSERT OR REPLACE INTO posts
+      (source, post_id, title, author, post_date, url, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)`)
+      .bind(post.source, post.postId, post.title, post.author, post.date, post.url, now)));
+    await env.DB.prepare(`INSERT INTO source_state (source, initialized, updated_at) VALUES (?, 1, ?)
+      ON CONFLICT(source) DO UPDATE SET initialized=1, updated_at=excluded.updated_at`)
+      .bind(source.key, now).run();
+    await recordSuccess(env.DB, source, 0, 0, now);
+    return { source: source.key, newCount: 0, modifiedCount: 0, at: now };
   }
 
-  await env.DB.prepare(`INSERT INTO monitor_state (key, value, updated_at) VALUES ('last_success', ?, ?)
+  const existingRows = await env.DB.prepare(
+    "SELECT post_id, title, author, post_date FROM posts WHERE source = ?",
+  ).bind(source.key).all();
+  const existing = new Map(
+    (existingRows.results || []).map((row) => [row.post_id, row]),
+  );
+
+  let newCount = 0;
+  let modifiedCount = 0;
+  for (const post of [...posts].reverse()) {
+    const previous = existing.get(post.postId);
+    let eventType = null;
+    if (!previous) eventType = "new";
+    else if (
+      previous.title !== post.title
+      || previous.author !== post.author
+      || previous.post_date !== post.date
+    ) {
+      eventType = "modified";
+    }
+
+    if (!eventType) continue;
+
+    await sendDiscord(env.DISCORD_WEBHOOK_URL, source, post, eventType);
+    await savePost(env.DB, post, now);
+    if (eventType === "new") newCount += 1;
+    else modifiedCount += 1;
+  }
+
+  await env.DB.prepare(
+    "UPDATE source_state SET updated_at = ? WHERE source = ?",
+  ).bind(now, source.key).run();
+  await recordSuccess(env.DB, source, newCount, modifiedCount, now);
+  return { source: source.key, newCount, modifiedCount, at: now };
+}
+
+async function recordSuccess(db, source, newCount, modifiedCount, now) {
+  await db.prepare(`INSERT INTO monitor_state (key, value, updated_at) VALUES ('last_success', ?, ?)
     ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at`)
-    .bind(JSON.stringify({ newCount, modifiedCount }), now).run();
-  console.log(JSON.stringify({ level: "info", event: "check_complete", newCount, modifiedCount, at: now }));
-  return { newCount, modifiedCount, at: now };
+    .bind(JSON.stringify({ source: source.key, newCount, modifiedCount }), now).run();
+}
+
+function sourceForScheduledTime(scheduledTime) {
+  const raw = Number(scheduledTime) || Date.now();
+  const epochMinute = raw > 1_000_000_000_000
+    ? Math.floor(raw / 60_000)
+    : Math.floor(raw / 60);
+  return SOURCES[epochMinute % SOURCES.length];
 }
 
 export default {
-  async scheduled(_controller, env, _ctx) {
+  async scheduled(controller, env, _ctx) {
+    const source = sourceForScheduledTime(controller.scheduledTime);
     try {
-      await checkNotices(env);
+      const result = await checkSource(env, source);
+      console.log(JSON.stringify({ level: "info", event: "check_complete", ...result }));
     } catch (error) {
-      console.error(JSON.stringify({ level: "error", event: "check_failed", message: error.message, at: new Date().toISOString() }));
+      console.error(JSON.stringify({
+        level: "error",
+        event: "check_failed",
+        source: source.key,
+        message: error.message,
+        at: new Date().toISOString(),
+      }));
       throw error;
     }
   },
@@ -258,7 +288,6 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname !== "/health") return new Response("Not Found", { status: 404 });
-    await ensureSchema(env.DB);
     const lastSuccess = await env.DB.prepare("SELECT value, updated_at FROM monitor_state WHERE key = 'last_success'").first();
     return Response.json({ ok: Boolean(lastSuccess), lastSuccess: lastSuccess || null });
   },
