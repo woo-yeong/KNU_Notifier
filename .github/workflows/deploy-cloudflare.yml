@@ -46,3 +46,57 @@ jobs:
 
       - name: Deploy all Workers
         run: npm run deploy:all
+
+      - name: Verify all collectors are fresh
+        env:
+          HEALTH_URL: https://knu-notice-discord-notifier.wooyeong.workers.dev/health
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import time
+          import urllib.request
+          from datetime import datetime, timezone
+
+          expected = {
+              "notice",
+              "employment",
+              "career_notice",
+              "field_training",
+              "ai_notice",
+          }
+          url = os.environ["HEALTH_URL"]
+          last_error = None
+
+          for attempt in range(1, 7):
+              try:
+                  with urllib.request.urlopen(url, timeout=20) as response:
+                      payload = json.load(response)
+
+                  sources = payload.get("sources", {})
+                  missing = expected - sources.keys()
+                  stale = {}
+                  now = datetime.now(timezone.utc)
+
+                  for source in expected & sources.keys():
+                      updated = datetime.fromisoformat(
+                          sources[source].replace("Z", "+00:00")
+                      )
+                      age_seconds = (now - updated).total_seconds()
+                      if age_seconds > 180:
+                          stale[source] = round(age_seconds / 60, 1)
+
+                  if not missing and not stale:
+                      print("All five collectors are fresh:", json.dumps(sources))
+                      break
+
+                  last_error = f"missing={sorted(missing)}, stale_minutes={stale}"
+              except Exception as error:
+                  last_error = repr(error)
+
+              print(f"Verification attempt {attempt}/6 failed: {last_error}")
+              if attempt < 6:
+                  time.sleep(15)
+          else:
+              raise SystemExit(f"Worker verification failed: {last_error}")
+          PY
