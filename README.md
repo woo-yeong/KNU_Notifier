@@ -1,64 +1,75 @@
-# 경북대 전자공학부 Discord 공지 알리미
+# 경북대학교 Discord 공지 알리미
 
-다음 다섯 게시판의 새 글을 Cloudflare Worker에서 매분 확인해 Discord로 전송합니다.
+경북대학교의 주요 공지 게시판을 매분 확인해 새 글과 수정된 글을 Discord로 전송하는 알림 서비스입니다.
 
-- 전자공학부 공지사항 전체: https://see.knu.ac.kr/mobile/content/notice.html
-- 전자공학부 취업게시판: https://see.knu.ac.kr/mobile/content/employment.html
-- 진로취업 공지사항: https://home.knu.ac.kr/HOME/knujob/sub.htm?nav_code=knu1623817159
-- 현장실습 공지사항: https://home.knu.ac.kr/HOME/knujob/sub.htm?nav_code=knu1623826179
-- 인공지능혁신융합대학사업단 공지사항: https://home.knu.ac.kr/HOME/aic/sub.htm?nav_code=aic1635293208
+## 알림 대상
 
-Discord 알림은 게시판별 색상과 아이콘을 사용합니다.
+| 게시판 | 확인 주기 |
+| --- | --- |
+| [전자공학부 공지사항](https://see.knu.ac.kr/mobile/content/notice.html) | 매분 |
+| [전자공학부 취업게시판](https://see.knu.ac.kr/mobile/content/employment.html) | 매분 |
+| [경북대학교 진로취업 공지사항](https://home.knu.ac.kr/HOME/knujob/sub.htm?nav_code=knu1623817159) | 매분 |
+| [경북대학교 현장실습 공지사항](https://home.knu.ac.kr/HOME/knujob/sub.htm?nav_code=knu1623826179) | 매분 |
+| [인공지능혁신융합대학사업단 공지사항](https://home.knu.ac.kr/HOME/aic/sub.htm?nav_code=aic1635293208) | 매분 |
 
-- 🔵 전자공학부 공지사항
-- 🟢 전자공학부 취업게시판
-- 🟠 진로취업 공지사항
-- 🟣 현장실습 공지사항
-- 🤖 인공지능혁신융합대학사업단 공지사항
+Discord 알림에는 게시판 출처, 공지 제목, 작성자, 작성일, 원문 링크가 포함됩니다.
 
-알림 상단에는 출처 게시판이, 바로 아래에는 클릭 가능한 공지 제목이 표시됩니다.
+같은 게시글의 제목·작성자·작성일이 변경되면 수정된 공지로 다시 알립니다. 조회수 변화와 목록에 표시되지 않는 본문 수정은 감지하지 않습니다.
 
-같은 게시글 ID라도 목록에 표시되는 제목·작성자·작성일이 변경되면 `✏️ 수정된 공지`로 다시 알립니다. 조회수 변화는 수정으로 취급하지 않습니다. 게시판 목록에 드러나지 않는 본문만의 무표시 수정은 감지 대상이 아닙니다.
+## Discord 참여
 
-Python 외부 패키지가 필요하지 않습니다. 각 사이트의 게시글 고유 ID로 중복을 판별하므로 고정 공지의 순서가 바뀌어도 같은 글을 반복 전송하지 않습니다.
+공지 알림을 받으려면 아래 서버에 참여하면 됩니다.
 
-## 1. Discord 웹훅 만들기
+[전자공학부 알리미 Discord 서버 참여하기](https://discord.gg/ZZy8esfcm)
 
-1. 알림을 받을 Discord 채널의 **채널 편집**을 누릅니다.
-2. **연동 → 웹후크 → 새 웹후크**를 선택합니다.
-3. **웹후크 URL 복사**를 누릅니다.
+## 동작 구조
 
-웹훅 URL은 비밀번호와 같습니다. 코드나 공개 저장소에 직접 붙여 넣지 마세요.
+게시판별 Cloudflare Worker가 독립적으로 매분 실행됩니다.
 
-## 2. GitHub 저장소 만들기
+| Worker | 담당 게시판 |
+| --- | --- |
+| `knu-notice-discord-notifier` | 전자공학부 공지사항 |
+| `knu-employment-discord-notifier` | 전자공학부 취업게시판 |
+| `knu-career-discord-notifier` | 진로취업 공지사항 |
+| `knu-field-training-discord-notifier` | 현장실습 공지사항 |
+| `knu-ai-discord-notifier` | 인공지능혁신융합대학사업단 공지사항 |
 
-1. GitHub에서 새 저장소를 만듭니다. 공개·비공개 모두 가능합니다.
-2. 이 폴더 안의 파일을 **폴더 구조 그대로** 저장소 최상단에 올립니다.
-3. 저장소의 **Settings → Secrets and variables → Actions**로 이동합니다.
-4. **New repository secret**을 누릅니다.
-5. 이름은 `DISCORD_WEBHOOK_URL`, 값에는 복사한 Discord 웹훅 URL을 입력합니다.
+모든 Worker는 같은 Cloudflare D1 데이터베이스를 사용해 게시글 상태와 마지막 성공 시각을 저장합니다. 한 Worker에서 오류가 발생해도 다른 게시판의 수집에는 영향을 주지 않습니다.
 
-## 3. 권한 설정
+## 주요 기능
 
-`state.json`을 자동 갱신하려면 다음 권한이 필요합니다.
+- 게시판별 매분 독립 확인
+- 게시글 고유 ID를 이용한 중복 전송 방지
+- 제목·작성자·작성일 변경 감지
+- 최초 실행 시 기존 글을 조용히 기준점으로 저장
+- Cloudflare Observability 로그 지원
+- GitHub Actions를 통한 5분 주기 상태 감시
+- 특정 게시판이 10분 이상 성공하지 못하면 감시 작업 실패 처리
 
-1. 저장소 **Settings → Actions → General**로 이동합니다.
-2. **Workflow permissions**에서 **Read and write permissions**를 선택합니다.
-3. 저장합니다.
+## 배포
 
-## 4. 최초 실행
+`cloudflare` 디렉터리에서 실행합니다.
 
-1. 저장소의 **Actions** 탭을 엽니다.
-2. 왼쪽에서 **Check KNU SEE notices**를 선택합니다.
-3. **Run workflow**를 누릅니다.
+```bash
+npm install
+npm run check:all
+npm run deploy:all
+```
 
-각 게시판의 최초 실행은 현재 보이는 글을 기준점으로 저장하고 알림을 보내지 않습니다. 이 처리가 없으면 기존 공지가 한꺼번에 Discord로 전송됩니다. 이후부터 새로 등록된 게시글만 전송합니다. 나중에 게시판이 추가되어도 새 게시판의 과거 글만 조용히 기준점으로 저장합니다.
+각 Worker에는 Discord 웹훅 Secret을 개별 등록해야 합니다.
 
-연결 자체를 시험하려면 **Run workflow** 창에서 `Send a Discord connection test only`를 체크하고 실행하세요.
+```bash
+npx wrangler secret put DISCORD_WEBHOOK_URL --config wrangler.jsonc
+npx wrangler secret put DISCORD_WEBHOOK_URL --config wrangler.employment.jsonc
+npx wrangler secret put DISCORD_WEBHOOK_URL --config wrangler.career.jsonc
+npx wrangler secret put DISCORD_WEBHOOK_URL --config wrangler.field-training.jsonc
+npx wrangler secret put DISCORD_WEBHOOK_URL --config wrangler.ai.jsonc
+```
 
-## 동작 주기와 주의점
+웹훅 URL은 비밀번호와 같습니다. 코드나 공개 저장소에 직접 저장하지 마세요.
 
-- 설정상 10분마다 실행하지만 GitHub Actions 사정에 따라 수분 이상 늦어질 수 있습니다.
-- 학교 사이트가 일시적으로 응답하지 않으면 작업이 실패하고 다음 주기에 다시 시도합니다.
-- 학교가 게시판 HTML 구조를 크게 바꾸면 Actions에서 오류가 납니다. 조용히 누락시키지 않고 실패하도록 설계했습니다.
-- GitHub가 장기간 활동이 없는 공개 저장소의 예약 실행을 중지할 수 있으므로 Actions 탭을 가끔 확인하세요.
+## 상태 확인
+
+대표 Worker의 Health 엔드포인트에서 다섯 게시판의 마지막 성공 시각을 확인할 수 있습니다.
+
+[Worker 상태 확인](https://knu-notice-discord-notifier.wooyeong.workers.dev/health)
