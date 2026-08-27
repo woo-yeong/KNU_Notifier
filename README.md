@@ -1,11 +1,12 @@
 # 경북대 전자공학부 Discord 공지 알리미
 
-다음 네 게시판의 새 글을 10분마다 확인해 Discord로 전송합니다.
+다음 다섯 게시판의 새 글을 Cloudflare Worker에서 매분 확인해 Discord로 전송합니다.
 
 - 전자공학부 공지사항 전체: https://see.knu.ac.kr/mobile/content/notice.html
 - 전자공학부 취업게시판: https://see.knu.ac.kr/mobile/content/employment.html
 - 진로취업 공지사항: https://home.knu.ac.kr/HOME/knujob/sub.htm?nav_code=knu1623817159
 - 현장실습 공지사항: https://home.knu.ac.kr/HOME/knujob/sub.htm?nav_code=knu1623826179
+- 인공지능혁신융합대학사업단 공지사항: https://home.knu.ac.kr/HOME/aic/sub.htm?nav_code=aic1635293208
 
 Discord 알림은 게시판별 색상과 아이콘을 사용합니다.
 
@@ -13,6 +14,7 @@ Discord 알림은 게시판별 색상과 아이콘을 사용합니다.
 - 🟢 전자공학부 취업게시판
 - 🟠 진로취업 공지사항
 - 🟣 현장실습 공지사항
+- 🤖 인공지능혁신융합대학사업단 공지사항
 
 알림 상단에는 출처 게시판이, 바로 아래에는 클릭 가능한 공지 제목이 표시됩니다.
 

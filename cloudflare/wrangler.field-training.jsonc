@@ -1,0 +1,30 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "knu-field-training-discord-notifier",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-24",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "SOURCE_KEY": "field_training"
+  },
+  "triggers": {
+    "crons": [
+      "* * * * *"
+    ]
+  },
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "head_sampling_rate": 1
+    }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "KNU-Notifier",
+      "database_id": "1bf4c53c-22b1-4395-b87d-f01282280f50"
+    }
+  ]
+}

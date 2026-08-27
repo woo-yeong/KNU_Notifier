@@ -68,6 +68,8 @@ jobs:
               "notice",
               "employment",
               "career_notice",
+              "field_training",
+              "ai_notice",
           }
           sources = data.get("sources") or {}
           missing_sources = expected_sources - set(sources)

@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "check": "wrangler deploy --dry-run",
-    "check:all": "wrangler deploy --dry-run && wrangler deploy --dry-run -c wrangler.employment.jsonc && wrangler deploy --dry-run -c wrangler.career.jsonc",
+    "check:all": "wrangler deploy --dry-run && wrangler deploy --dry-run -c wrangler.employment.jsonc && wrangler deploy --dry-run -c wrangler.career.jsonc && wrangler deploy --dry-run -c wrangler.field-training.jsonc && wrangler deploy --dry-run -c wrangler.ai.jsonc",
     "deploy": "wrangler deploy",
-    "deploy:all": "wrangler deploy && wrangler deploy -c wrangler.employment.jsonc && wrangler deploy -c wrangler.career.jsonc",
+    "deploy:all": "wrangler deploy && wrangler deploy -c wrangler.employment.jsonc && wrangler deploy -c wrangler.career.jsonc && wrangler deploy -c wrangler.field-training.jsonc && wrangler deploy -c wrangler.ai.jsonc",
     "dev": "wrangler dev --test-scheduled"
   },
   "devDependencies": {
