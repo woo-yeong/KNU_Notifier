@@ -179,13 +179,15 @@ async function ensureSchema(db) {
 
 async function sendDiscord(webhookUrl, source, post, eventType) {
   const modified = eventType === "modified";
+  const notificationText =
+    `${source.emoji} [${source.name} · ${modified ? "수정" : "새 공지"}] ${post.title}`;
   const response = await fetch(webhookUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json", "User-Agent": USER_AGENT },
     body: JSON.stringify({
       username: "KNU 전자공학부 알리미",
       allowed_mentions: { parse: [] },
-      content: `${source.emoji} **${source.name} ${modified ? "수정된 공지" : "새 공지"}**`,
+      content: notificationText.slice(0, 2000),
       embeds: [
         {
           title: `${modified ? "✏️" : "📌"} ${post.title}`.slice(0, 256),
