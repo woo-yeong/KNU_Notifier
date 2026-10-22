@@ -1,9 +1,8 @@
-name: Check KNU SEE notices
+name: Legacy notice checker (manual only)
 
+# Notice collection now runs on Cloudflare Workers every minute.
+# This legacy checker is kept only for manual diagnostics.
 on:
-  schedule:
-    # GitHub cron uses UTC. Every 10 minutes.
-    - cron: "*/10 * * * *"
   workflow_dispatch:
     inputs:
       test_discord:
